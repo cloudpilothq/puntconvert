@@ -21,12 +21,12 @@ export default function MobileApp() {
         </p>
 
         <div className="flex items-center justify-center gap-4" style={{ flexWrap: 'wrap' }}>
-          <button className="btn-secondary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
-            Download for iOS
-          </button>
-          <button className="btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
-            Download for Android
-          </button>
+          <a href="/app" style={{ display: 'inline-block' }}>
+            <img src="/app-store-badge.svg" alt="Download on the App Store" style={{ height: '52px' }} />
+          </a>
+          <a href="/app" style={{ display: 'inline-block' }}>
+            <img src="/google-play-badge.svg" alt="Get it on Google Play" style={{ height: '52px' }} />
+          </a>
         </div>
         
         <p style={{ color: 'var(--text-muted)', marginTop: '2rem', fontSize: '0.9rem' }}>

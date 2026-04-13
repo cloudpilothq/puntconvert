@@ -98,13 +98,11 @@ export default function Home() {
             </p>
             
             <div className="flex items-center justify-center gap-4" style={{ flexWrap: 'wrap' }}>
-              <a href="/app" className="btn-secondary" style={{ padding: '1rem 2rem', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <Smartphone size={22} color="var(--text-main)" />
-                Get it on iOS
+              <a href="/app" style={{ display: 'inline-block' }}>
+                <img src="/app-store-badge.svg" alt="Download on the App Store" style={{ height: '52px' }} />
               </a>
-              <a href="/app" className="btn-primary" style={{ padding: '1rem 2rem', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <Download size={22} color="#fff" />
-                Get it on Android
+              <a href="/app" style={{ display: 'inline-block' }}>
+                <img src="/google-play-badge.svg" alt="Get it on Google Play" style={{ height: '52px' }} />
               </a>
             </div>
             
