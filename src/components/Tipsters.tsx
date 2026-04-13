@@ -27,23 +27,42 @@ export default function Tipsters() {
           onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
           >
             <div>
-              <div className="flex items-center gap-4" style={{ marginBottom: '1rem' }}>
+              <div className="flex items-center gap-4" style={{ marginBottom: '1.5rem' }}>
+                <img 
+                  src={`https://unavatar.io/x/${tipster.x.replace('@', '')}`} 
+                  alt={tipster.name}
+                  style={{ 
+                    width: '40px', height: '40px', borderRadius: '50%', 
+                    objectFit: 'cover', flexShrink: 0, 
+                    border: '1px solid rgba(0, 242, 254, 0.3)' 
+                  }}
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    if (e.currentTarget.nextElementSibling) {
+                      (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'flex';
+                    }
+                  }}
+                />
                 <div style={{
-                  width: '40px', height: '40px', borderRadius: '50%',
+                  display: 'none', width: '40px', height: '40px', borderRadius: '50%',
                   background: 'linear-gradient(135deg, var(--neon-blue), var(--neon-purple))',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontWeight: 'bold', fontSize: '1.2rem', color: '#fff'
+                  alignItems: 'center', justifyContent: 'center',
+                  fontWeight: 'bold', fontSize: '1.2rem', color: '#fff', flexShrink: 0
                 }}>
                   {tipster.name.charAt(0)}
                 </div>
-                <h3 style={{ fontSize: '1.1rem', fontWeight: 600 }}>{tipster.name}</h3>
+                <div>
+                  <h3 style={{ fontSize: '1.1rem', fontWeight: 600 }}>{tipster.name}</h3>
+                  <a href={`https://x.com/${tipster.x.replace('@', '')}`} target="_blank" rel="noreferrer" style={{ color: 'var(--neon-green)', fontSize: '0.9rem', textDecoration: 'none' }}>
+                    {tipster.x.startsWith('@') ? tipster.x : `@${tipster.x}`}
+                  </a>
+                </div>
               </div>
-              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>"{tipster.desc}"</p>
             </div>
             
-            <button className="btn-secondary" style={{ width: '100%', fontSize: '0.85rem' }}>
-              Join on {tipster.platform} <ExternalLink size={14} style={{ marginLeft: '4px' }}/>
-            </button>
+            <a href={tipster.telegram} target="_blank" rel="noreferrer" className="btn-secondary" style={{ width: '100%', fontSize: '0.85rem', display: 'flex', justifyContent: 'center', alignItems: 'center', textDecoration: 'none' }}>
+              Join on Telegram <ExternalLink size={14} style={{ marginLeft: '6px' }}/>
+            </a>
           </div>
         ))}
       </div>

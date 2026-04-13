@@ -24,10 +24,10 @@ export const RECENT_CONVERSIONS = [
 ];
 
 export const TOP_TIPSTERS = [
-  { name: "DC | Official", desc: "By all means, we will be fruitful", platform: "Telegram" },
-  { name: "Pools compilers", desc: "Hit Jackpot!", platform: "Web" },
-  { name: "Tipsterli", desc: "The sure 1x2 mart.", platform: "Web" },
-  { name: "Freshtip \ud83d\ude0e\u26a1\u2705", desc: "WINNING IS THE GOAL\u2728\ufe0f", platform: "Telegram" },
-  { name: "SportPremi", desc: "Betting tips & sports news", platform: "Web" },
-  { name: "SirhGabby- BET HUB", desc: "Free Access To Bet Codes \ud83d\ude4f", platform: "Telegram" }
+  { name: "MrBanks", x: "@Mrbankstips", telegram: "https://t.me/mrbankstips" },
+  { name: "Mayor of Ekiti", x: "@Ekitipikin", telegram: "https://t.me/ekiti1" },
+  { name: "BETFUSE", x: "@betfuse1", telegram: "https://t.me/bet_fuse0" },
+  { name: "GirlPunter", x: "@girlpunter", telegram: "https://t.me/megaodds_edits" },
+  { name: "Cindymonel", x: "@cindy_blog", telegram: "https://t.me/cindymonel" },
+  { name: "Mr Bayo", x: "mrbayoa1", telegram: "https://t.me/mrbayospace" }
 ];
