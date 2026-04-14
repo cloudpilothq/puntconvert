@@ -46,6 +46,43 @@ export default function AboutUs() {
           </p>
         </div>
       </div>
+
+      {/* App Promo Banner */}
+      <section style={{ marginTop: '5rem', marginBottom: '2rem' }}>
+        <div style={{
+          background: 'linear-gradient(135deg, rgba(56, 239, 125, 0.1), rgba(0, 242, 254, 0.1))',
+          border: '1px solid rgba(0, 242, 254, 0.2)',
+          borderRadius: '24px',
+          padding: '4rem 2rem',
+          textAlign: 'center',
+          position: 'relative',
+          boxShadow: '0 10px 40px -10px rgba(0, 242, 254, 0.15)'
+        }}>
+          <h2 style={{ fontSize: '2.5rem', color: 'var(--text-main)', marginBottom: '1rem', fontFamily: 'Outfit' }}>Take PuntConvert Anywhere</h2>
+          <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 3rem auto', lineHeight: '1.6' }}>
+            Experience lightning-fast mobile conversions, native push notifications for live odds matching, and one-tap tipster syncing with the PuntConvert Mobile App. Available now for iOS and Android devices.
+          </p>
+          
+          <div className="flex items-center justify-center gap-4" style={{ flexWrap: 'wrap' }}>
+            <a href="/app" style={{ display: 'inline-block' }}>
+              <img src="/app-store-badge.svg" alt="Download on the App Store" style={{ height: '52px' }} />
+            </a>
+            <a href="/app" style={{ display: 'inline-block' }}>
+              <img src="/google-play-badge.svg" alt="Get it on Google Play" style={{ height: '52px' }} />
+            </a>
+          </div>
+          
+          {/* Decorative background glow elements */}
+          <div style={{
+            position: 'absolute', top: '-50px', left: '-50px', width: '150px', height: '150px',
+            background: 'var(--neon-green)', filter: 'blur(100px)', opacity: 0.15, borderRadius: '50%'
+          }} />
+          <div style={{
+            position: 'absolute', bottom: '-50px', right: '-50px', width: '150px', height: '150px',
+            background: 'var(--neon-blue)', filter: 'blur(100px)', opacity: 0.15, borderRadius: '50%'
+          }} />
+        </div>
+      </section>
     </div>
   );
 }
